@@ -31,4 +31,8 @@ public class Ainur extends Person {
 	public void setAlreadyStoleRing(boolean alreadyStoleRing) {
 		this.alreadyStoleRing = alreadyStoleRing;
 	}
+
+	public Race getRACE() {
+		return RACE;
+	}
 }

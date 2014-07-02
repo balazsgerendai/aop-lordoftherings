@@ -7,9 +7,6 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
 
-import com.epam.training.lordoftherings.domain.Army;
-import com.epam.training.lordoftherings.domain.Person;
-
 @Aspect
 @Component
 public class StatusReportAspect {

@@ -5,5 +5,8 @@ public class Human extends Person {
 	public Human() {
 		super();
 	}
+	public Race getRACE() {
+		return RACE;
+	}
 
 }

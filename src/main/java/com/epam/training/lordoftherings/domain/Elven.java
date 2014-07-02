@@ -7,4 +7,8 @@ public class Elven extends Person {
 		super();
 	}
 
+	public Race getRACE() {
+		return RACE;
+	}
+
 }

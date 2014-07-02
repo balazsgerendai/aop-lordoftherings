@@ -7,4 +7,8 @@ public class Hobbit extends Person {
 		super();
 	
 	}
+
+	public Race getRACE() {
+		return RACE;
+	}
 }

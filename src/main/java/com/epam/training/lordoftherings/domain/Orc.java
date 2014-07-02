@@ -7,4 +7,8 @@ public class Orc extends Person {
 		super();
 		this.health = 50;
 	}
+
+	public Race getRACE() {
+		return RACE;
+	}
 }

@@ -7,4 +7,8 @@ public class Dwarf extends Person {
 		super();
 	}
 
+	public Race getRACE() {
+		return RACE;
+	}
+
 }
