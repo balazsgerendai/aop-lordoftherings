@@ -11,4 +11,9 @@ public class Orc extends Person {
 	public Race getRACE() {
 		return RACE;
 	}
+
+	@Override
+	public String battleCry() {
+		return "FOR MORDOR!!!";
+	}
 }

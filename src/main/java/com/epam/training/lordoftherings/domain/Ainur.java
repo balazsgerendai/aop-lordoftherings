@@ -35,4 +35,9 @@ public class Ainur extends Person {
 	public Race getRACE() {
 		return RACE;
 	}
+
+	@Override
+	public String battleCry() {
+		return "YOU SHALL NOT PASS!!!";
+	}
 }

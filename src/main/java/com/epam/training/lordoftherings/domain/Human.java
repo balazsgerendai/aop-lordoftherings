@@ -8,5 +8,9 @@ public class Human extends Person {
 	public Race getRACE() {
 		return RACE;
 	}
+	@Override
+	public String battleCry() {
+		return "FOR ARAGORN";
+	}
 
 }

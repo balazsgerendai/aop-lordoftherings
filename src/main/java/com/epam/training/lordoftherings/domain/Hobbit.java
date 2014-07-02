@@ -11,4 +11,9 @@ public class Hobbit extends Person {
 	public Race getRACE() {
 		return RACE;
 	}
+
+	@Override
+	public String battleCry() {
+		return "For HOBBITTOWN";
+	}
 }

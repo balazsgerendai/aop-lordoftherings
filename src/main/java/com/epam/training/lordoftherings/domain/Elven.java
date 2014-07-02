@@ -11,4 +11,9 @@ public class Elven extends Person {
 		return RACE;
 	}
 
+	@Override
+	public String battleCry() {
+		return "For ELRON!";
+	}
+
 }

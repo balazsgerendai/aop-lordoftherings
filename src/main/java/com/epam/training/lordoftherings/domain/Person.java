@@ -2,7 +2,7 @@ package com.epam.training.lordoftherings.domain;
 
 import java.util.Random;
 
-public class Person {
+public abstract class Person {
     private String name;
     private Gender gender;
     private int attackPower;
@@ -13,6 +13,8 @@ public class Person {
 	public Person() {
         attacking = new Random();
     }
+	
+	public abstract String battleCry();
 	
 	public boolean attack(Person enemyPerson){
 		boolean shootHit = false;
@@ -54,7 +56,7 @@ public class Person {
 		return "Person [name=" + name + ", gender=" + gender + ", attackPower="
 				+ attackPower + "]";
 	}
-
+	
 
     
 }

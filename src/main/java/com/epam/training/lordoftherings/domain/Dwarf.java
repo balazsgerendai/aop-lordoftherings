@@ -11,4 +11,9 @@ public class Dwarf extends Person {
 		return RACE;
 	}
 
+	@Override
+	public String battleCry() {
+		return "Smaug feel my WRATH!!";
+	}
+
 }
