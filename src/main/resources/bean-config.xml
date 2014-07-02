@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:c="http://www.springframework.org/schema/c"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.2.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.2.xsd
+		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.2.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.2.xsd">
+
+	<aop:aspectj-autoproxy proxy-target-class="true"/>
+	<context:component-scan base-package="com.epam.training.lordoftherings.aspects" />
+
+	<context:annotation-config />
+
+	<bean id="conversionService"
+		class="org.springframework.context.support.ConversionServiceFactoryBean"
+		autowire="byName">
+	</bean>
+<bean id="battleOfMordor" class="com.epam.training.lordoftherings.domain.Battle">
+	<constructor-arg index="0" value="Battle Of Mordor" />
+	<constructor-arg index="1" ref="armyOfLight" />
+	<constructor-arg index="2" ref="armyOfEvil" />
+</bean>
+
+<bean id="armyOfEvil" class="com.epam.training.lordoftherings.domain.Army">
+	<constructor-arg index="0" value="EVIL"/>
+	<constructor-arg index="1" ref="mordorSoldiers"/>
+	<property name="name" value="Army of the Fellowship" />
+</bean>
+
+<bean id="armyOfLight" class="com.epam.training.lordoftherings.domain.Army">
+	<constructor-arg index="0" value="GOOD"/>
+	<constructor-arg index="1" ref="fellowShipSoldiers"/>
+	<property name="name" value="Army of Mordor" />
+</bean>
+
+	<util:list id="mordorSoldiers" >
+		<ref local="sauron" />
+		<ref local="orcDemonSpawn" />
+		<ref local="orcDemonSpawn" />
+		<ref local="orcDemonSpawn" />
+		<ref local="orcDemonSpawn" />
+		<ref local="orcDemonSpawn" />
+		<ref local="orcDemonSpawn" />
+		<ref local="orcDemonSpawn" />
+		<ref local="orcDemonSpawn" />
+		<ref local="orcDemonSpawn" />
+		<ref local="orcDemonSpawn" />
+		<ref local="orcDemonSpawn" />
+		<ref local="orcDemonSpawn" />
+		<ref local="orcDemonSpawn" />
+		<ref local="orcDemonSpawn" />
+		<ref local="orcDemonSpawn" />
+	</util:list>
+	
+	<util:list id="fellowShipSoldiers" >
+		<ref local="gandalf" />
+		<ref local="elvenArcher" />
+		<ref local="elvenArcher" />
+		<ref local="dwarfAxeMen" />
+		<ref local="dwarfAxeMen" />
+		<ref local="humanWarrior" />
+		<ref local="humanWarrior" />
+		<ref local="humanWarrior" />
+		<ref local="humanWarrior" />
+		<ref local="hobbitRogue" />
+	</util:list>
+	
+	<bean id="elvenArcher" class="com.epam.training.lordoftherings.domain.Elven" 
+		p:name="Elven Archer" p:gender="MALE" p:attackPower="20" scope="prototype"/>
+	<bean id="dwarfAxeMen" class="com.epam.training.lordoftherings.domain.Dwarf"
+	p:name="Dwarf Axe Men" p:gender="MALE" p:attackPower="60" scope="prototype"/>
+	<bean id="hobbitRogue" class="com.epam.training.lordoftherings.domain.Hobbit"
+	p:name="Hobbit Rogue" p:gender="MALE" p:attackPower="30" scope="prototype"/>
+	<bean id="humanWarrior" class="com.epam.training.lordoftherings.domain.Human"
+	p:name="Human Warrior" p:gender="MALE" p:attackPower="60" scope="prototype"/>
+	<bean id="orcDemonSpawn" class="com.epam.training.lordoftherings.domain.Orc"
+	p:name="Orc Demon Spawn" p:gender="MALE" p:attackPower="20" scope="prototype"/>
+		
+			
+	<bean id="gandalf" class="com.epam.training.lordoftherings.domain.Ainur"
+		p:name="Gandalf" p:gender="MALE" p:attackPower="100" p:ringPower-ref="theOneRing"/>
+	<bean id="sauron" class="com.epam.training.lordoftherings.domain.Ainur"
+		p:name="Sauron" p:gender="MALE" p:attackPower="10"  />
+
+	<bean id="theOneRing" class="com.epam.training.lordoftherings.domain.Ring" 
+		p:power="1000" p:name="The One Ring"/>
+</beans>

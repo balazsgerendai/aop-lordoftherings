@@ -1,0 +1,9 @@
+com\epam\training\lordoftherings\domain\RingCreator.class
+com\epam\training\lordoftherings\domain\Gender.class
+com\epam\training\lordoftherings\domain\Human.class
+com\epam\training\lordoftherings\domain\Elven.class
+com\epam\training\lordoftherings\domain\Ring.class
+com\epam\training\lordoftherings\domain\Race.class
+com\epam\training\lordoftherings\domain\Dwarf.class
+com\epam\training\lordoftherings\App.class
+com\epam\training\lordoftherings\domain\Person.class
